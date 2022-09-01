@@ -13,7 +13,7 @@ public class PostRequest {
         return getResponseBody(response);
     }
 
-    public static Response getById(String endpoint, String id) {
+    public static Response getById(String endpoint, int id) {
         RestAssured.baseURI = PostEndpoint.BASE_URL;
         Response response = RestAssured
                 .given().pathParam("id", id)
@@ -29,7 +29,7 @@ public class PostRequest {
         return getResponseBody(response);
     }
 
-    public static Response put(String endpoint, String id, String payload) {
+    public static Response put(String endpoint, int id, String payload) {
         RestAssured.baseURI = PostEndpoint.BASE_URL;
         Response response = RestAssured
                 .given().contentType(ContentType.JSON).accept(ContentType.JSON).body(payload)
@@ -38,7 +38,7 @@ public class PostRequest {
         return getResponseBody(response);
     }
 
-    public static Response delete(String endpoint, String id) {
+    public static Response delete(String endpoint, int id) {
         RestAssured.baseURI = PostEndpoint.BASE_URL;
         Response response = RestAssured
                 .given().pathParam("id", id)
