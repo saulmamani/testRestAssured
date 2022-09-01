@@ -8,12 +8,15 @@ import io.restassured.response.ValidatableResponse;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
-public class TareaTest {
+public class PostsRestAssuredTest {
     @Test
     public void getPostsTest() {
         Response response = PostRequest.get(PostEndpoint.GET);
-        response.then().assertThat().statusCode(200);
-        response.then().assertThat().body("size()", Matchers.not(0));
+
+        ValidatableResponse validatableResponse = response.then().assertThat();
+        validatableResponse.statusCode(200);
+        validatableResponse.body("size()", Matchers.not(0));
+        validatableResponse.body("size()", Matchers.equalTo(100));
     }
 
     @Test
@@ -33,16 +36,16 @@ public class TareaTest {
         post.setBody("descripcion del post");
         post.setUserId(1);
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        String payload = objectMapper.writeValueAsString(post);
+        String payload = convertPostToString(post);
 
         Response response = PostRequest.post(PostEndpoint.POST, payload);
 
-        response.then().assertThat().statusCode(201);
-        response.then().assertThat().body("id", Matchers.equalTo(101));
-        response.then().assertThat().body("title", Matchers.equalTo("nuevo post"));
-        response.then().assertThat().body("body", Matchers.equalTo("descripcion del post"));
-        response.then().assertThat().body("userId", Matchers.equalTo(1));
+        ValidatableResponse validatableResponse = response.then().assertThat();
+        validatableResponse.statusCode(201);
+        validatableResponse.body("id", Matchers.equalTo(101));
+        validatableResponse.body("title", Matchers.equalTo("nuevo post"));
+        validatableResponse.body("body", Matchers.equalTo("descripcion del post"));
+        validatableResponse.body("userId", Matchers.equalTo(1));
     }
 
     @Test
@@ -53,14 +56,14 @@ public class TareaTest {
         post.setBody("Descripcion del body modificado");
         post.setUserId(2);
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        String payload = objectMapper.writeValueAsString(post);
+        String payload = convertPostToString(post);
 
         Response response = PostRequest.put(PostEndpoint.PUT, id, payload);
 
-        response.then().assertThat().statusCode(200);
-        response.then().assertThat().body("title", Matchers.equalTo("Titulo modificado"));
-        response.then().assertThat().body("userId", Matchers.equalTo(2));
+        ValidatableResponse validatableResponse = response.then().assertThat();
+        validatableResponse.statusCode(200);
+        validatableResponse.body("title", Matchers.equalTo("Titulo modificado"));
+        validatableResponse.body("userId", Matchers.equalTo(2));
     }
 
     @Test
@@ -69,5 +72,11 @@ public class TareaTest {
         Response response = PostRequest.delete(PostEndpoint.DELETE, id);
 
         response.then().assertThat().statusCode(200);
+    }
+
+    private static String convertPostToString(Post post) throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        String payload = objectMapper.writeValueAsString(post);
+        return payload;
     }
 }

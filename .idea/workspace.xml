@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="faaa164c-7725-48bb-ba34-fac906ad68d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TareaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TareaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/PostRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/PostRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TareaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PostsRestAssuredTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,51 +46,50 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TareaTest.deleteTest">
-    <configuration name="RestAssuredTest.getEmployeeWithIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PostsRestAssuredTest">
+    <configuration name="PostsRestAssuredTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Rest_assure_project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestAssuredTest" />
-      <option name="METHOD_NAME" value="getEmployeeWithIdTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="PostsRestAssuredTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TareaTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostsRestAssuredTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Rest_assure_project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TareaTest" />
+      <option name="MAIN_CLASS_NAME" value="PostsRestAssuredTest" />
       <option name="METHOD_NAME" value="deleteTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TareaTest.getPostByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostsRestAssuredTest.getPostByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Rest_assure_project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TareaTest" />
+      <option name="MAIN_CLASS_NAME" value="PostsRestAssuredTest" />
       <option name="METHOD_NAME" value="getPostByIdTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TareaTest.postTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostsRestAssuredTest.getPostsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Rest_assure_project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TareaTest" />
-      <option name="METHOD_NAME" value="postTest" />
+      <option name="MAIN_CLASS_NAME" value="PostsRestAssuredTest" />
+      <option name="METHOD_NAME" value="getPostsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TareaTest.putTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostsRestAssuredTest.putTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Rest_assure_project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TareaTest" />
+      <option name="MAIN_CLASS_NAME" value="PostsRestAssuredTest" />
       <option name="METHOD_NAME" value="putTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -100,11 +98,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TareaTest.deleteTest" />
-        <item itemvalue="JUnit.TareaTest.putTest" />
-        <item itemvalue="JUnit.TareaTest.getPostByIdTest" />
-        <item itemvalue="JUnit.TareaTest.postTest" />
-        <item itemvalue="JUnit.RestAssuredTest.getEmployeeWithIdTest" />
+        <item itemvalue="JUnit.PostsRestAssuredTest" />
+        <item itemvalue="JUnit.PostsRestAssuredTest.getPostsTest" />
+        <item itemvalue="JUnit.PostsRestAssuredTest.deleteTest" />
+        <item itemvalue="JUnit.PostsRestAssuredTest.putTest" />
+        <item itemvalue="JUnit.PostsRestAssuredTest.getPostByIdTest" />
       </list>
     </recent_temporary>
   </component>
